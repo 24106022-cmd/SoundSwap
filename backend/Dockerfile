@@ -1,14 +1,16 @@
 FROM python:3.12-slim
 
-# Install FFmpeg, curl, and unzip
 RUN apt-get update && \
-    apt-get install -y ffmpeg curl unzip && \
+    apt-get install -y ffmpeg curl unzip ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
-# Install Deno JavaScript runtime
+# Install Deno
 RUN curl -fsSL https://deno.land/install.sh | sh
 
 ENV PATH="/root/.deno/bin:${PATH}"
+
+# Verify that Deno is installed
+RUN deno --version
 
 WORKDIR /app
 
