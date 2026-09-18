@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SoundSwap</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>SoundSwap</h1>
+
+        <p class="subtitle">
+            Convert YouTube videos into audio.
+        </p>
+
+        <form id="download-form">
+
+            <input
+                type="url"
+                id="youtube-url"
+                placeholder="Paste YouTube URL"
+                required
+            >
+
+            <select id="audio-format">
+                <option value="mp3">MP3</option>
+                <option value="wav">WAV</option>
+                <option value="flac">FLAC</option>
+                <option value="aac">AAC</option>
+                <option value="ogg">OGG</option>
+                <option value="m4a">M4A</option>
+                <option value="aiff">AIFF</option>
+                <option value="alac">ALAC</option>
+            </select>
+
+            <button type="submit" id="download-button">
+                Download
+            </button>
+
+        </form>
+
+        <p id="status"></p>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
